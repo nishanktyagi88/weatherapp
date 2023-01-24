@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <script src="https://kit.fontawesome.com/c44a5871d4.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+    body{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center; 
+       background-color: #2a3a92;
+       background-image: url('back.avif');
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    #mycard{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 700px;
+        height: 600px;
+        /* border: 1px solid black; */
+        background-color: white;
+        border-radius: 35px;
+        padding: 30px;
+    }
+    #weathericon{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 35%;
+        left: 45%;
+    }
+    #citytemperature{
+        display: flex;
+        text-align: center;
+        font-size: 70px;
+        font-weight: 700;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #0a47d6;
+        padding: 10px;
+        position: absolute;
+        top: 55%;
+        left: 45%;
+    }
+    #cityname{
+        font-size: 90px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 700;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: rgb(93,93,93);
+        position: absolute;
+        top: 67vh;
+        left: 93vh;
+    }
+    .card{
+        font-size: 50px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+    <div class="card">
+        <h1>Live Temperature</h1>
+    </div>
+    <div id="mycard">
+        <div id="weathericon">
+            <!-- <i class="fa-solid fa-cloud" style="font-size: 170px; color:rgb(92,92,92)"></i> -->
+            {%weathericon%}
+        </div>
+        <div id="citytemperature">
+            {%temperature%}
+        </div>
+        <div id="cityname">
+            {%city%}
+        </div>
+    </div>
+</div>
+</body>
+</html>
